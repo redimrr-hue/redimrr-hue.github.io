@@ -1,0 +1,17 @@
+function setup() {
+  createCanvas(400, 400);
+  background(240);
+  
+  for (let i = 0; i < 30; i++) {
+    let x = random(width);
+    let y = random(height);
+    let size = random(10, 60);
+    let r = random(255);
+    let g = random(255);
+    let b = random(255);
+
+    fill(r, g, b);
+    noStroke();
+    ellipse(x, y, size, size);
+  }
+}
