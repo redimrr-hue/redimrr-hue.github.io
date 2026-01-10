@@ -1,0 +1,13 @@
+function setup() {
+  createCanvas(400, 400);
+  background(240);
+
+  let spacing = 50;
+  let size = 30;
+
+  for (let x = spacing; x < width; x += spacing) {
+    for (let y = spacing; y < height; y += spacing) {
+      ellipse(x, y, size, size);
+    }
+  }
+}
