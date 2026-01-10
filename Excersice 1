@@ -1,0 +1,10 @@
+function setup() {
+  createCanvas(400, 400);
+}
+
+function draw() {
+  background(220);
+  ellipse(100, 100, 120)
+  square(100,250,100)
+  triangle(250,203,340,200,300,250)
+}
