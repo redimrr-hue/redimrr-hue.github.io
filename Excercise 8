@@ -1,0 +1,24 @@
+let angleRot = 0;
+
+function setup() {
+  createCanvas(600, 400);
+}
+
+function draw() {
+  background(20);
+
+
+  translate(width / 2, height / 2);
+
+  stroke(255);
+  angleMode(DEGREES)
+  rotate(angleRot);
+  angleRot += 0.05;
+
+  rectMode(CENTER);
+  fill(100, 200, 255);
+  rect(0, 0, 80, 80);
+
+  noStroke();
+  fill(255);
+}
