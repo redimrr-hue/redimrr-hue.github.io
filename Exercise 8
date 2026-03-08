@@ -1,0 +1,25 @@
+let myFont;
+
+function preload() {
+  myFont = loadFont(
+    "https://cdnjs.cloudflare.com/ajax/libs/topcoat/0.8.0/font/SourceCodePro-Regular.otf"
+  );
+}
+
+function setup() {
+  createCanvas(600, 400);
+  textAlign(CENTER, CENTER);
+}
+
+function draw() {
+  background(40, 40, 70);
+
+  textFont(myFont);
+
+  fill(255);
+  textSize(42);
+  text("Custom Font Loaded!", width / 2, height / 2 - 20);
+
+  textSize(20);
+  text("Using preload() + loadFont()", width / 2, height / 2 + 30);
+}
