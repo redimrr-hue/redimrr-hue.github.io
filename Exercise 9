@@ -1,0 +1,33 @@
+let ball = {
+  x: 300,
+  y: 200,
+  vx: 5,
+  vy: 4,
+  r: 25
+};
+
+function setup() {
+  createCanvas(600, 400);
+}
+
+function draw() {
+  background(30);
+
+  let shakeX = random(-4, 4);
+  let shakeY = random(-4, 4);
+  translate(shakeX, shakeY);
+
+  ball.x += ball.vx;
+  ball.y += ball.vy;
+
+  if (ball.x < ball.r || ball.x > width - ball.r) {
+    ball.vx *= -1;
+  }
+
+  if (ball.y < ball.r || ball.y > height - ball.r) {
+    ball.vy *= -1;
+  }
+
+  fill(255, 180, 0);
+  ellipse(ball.x, ball.y, ball.r * 2);
+}
